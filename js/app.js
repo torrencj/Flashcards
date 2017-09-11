@@ -1,6 +1,10 @@
 //Uses jquery and Materialize
+var inputForm = document.querySelector('form')
+var cardFrontContent = document.querySelector('.front');
+var cardBackContent = document.querySelector('.back');
+var cardFrontInput = document.querySelector('#front-input');
+var cardBackInput = document.querySelector('#back-input');
 
-var inputForm = document.querySelector('#flash-card-input');
 
 function getSelectionText() {
     var text = "";
@@ -34,5 +38,14 @@ $("#flash-card-input").keypress(function(event) {
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
-  console.log(event);
+  console.log(inputForm);
+  if (cardFrontInput.value && cardFrontInput.value) {
+    cardBackContent.textContent = cardBackInput.value;
+    cardFrontContent.textContent = cloze(cardFrontInput.value, cardBackInput.value);
+    cardFrontInput.value = '';
+    cardBackInput.value = '';
+   } else {
+    Materialize.toast("You need to have both text and answer", 3000);
+  }
+
 }
