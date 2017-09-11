@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style/master.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  </head>
+  <body>
+  <main>
+    <nav class="red lighten-4" role="navigation">
+      <div class="nav-wrapper">
+        <a id="nav-logo" href="#" class="left white-text brand-logo"><em>F</em></a>
+        <ul class="right">
+          <li><a href="explain.html">View all cards</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row center">
+        <h2>Flashcardify</h2>
+        <br>
+        <h5 class="grey-text lighten-1">The <em>easy</em> place to make a flashcard.</h5>
+        <p class="grey-text lighten-4">(Assuming it ever works...)</p>
+        <br>
+      </div>
+      <div class="row">
+        <form id="flash-card-input">
+          <div class="input-field col s5">
+            <input value="" id="front" type="text" class="validate">
+            <label class="active" for="front">Full text</label>
+          </div>
+          <div class="input-field col s5">
+            <input value="" id="back" type="text" class="validate">
+            <label class="active" for="back">Answer</label>
+          </div>
+          <input class="waves-effect waves-light btn" type="submit" value="Create!">
+        </form>
+      </div>
+
+      <div class="row center">
+        <div class="col s12 m6 offset-m3">
+          <label class="flip">
+            <input type="checkbox" style="display:none"/>
+            <div class="flashcard valign-wrapper">
+              <div class="front blue lighten-1 white-text">Front!
+              </div>
+              <div class="back purple accent-1 white-text">Back!
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <p>copyright john 2017</p>
+      </div>
+    </div>
+  </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" charset="utf-8"></script> -->
+    <!-- <script src="materialize/js/materialize.js" charset="utf-8"></script> -->
+    <!-- <script src="materialize/js/init.js"></script> -->
+
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
